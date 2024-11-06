@@ -7,27 +7,28 @@
     </head>
     <body>
         <h1>Thanksgiving Potluck Information</h1>
-        <form>
+        <form id="potluckInfo" onsubmit="submitForm(event)">
             <fieldset>
                 <legend>Personal Info</legend>
             <p>Name: 
-            <input type="text" name="name"/>
+            <input type="text" name="name" id="name"/>
             </p>
             <p>Email: 
-                <input type="email" name="email"/>
+                <input type="email" name="email" id="email"/>
             </p>
             <p> Select what you will be bringing:</p>
-            <input type="radio" name="meal" value="appetizer"/> Appetizer
-                <input type="radio" name="meal" value="entre" /> Entre
-                <input type="radio" name="meal" value="dessert" /> Dessert
+            <input type="radio" name="meal" value="appetizer" id="appetizer"/> Appetizer
+                <input type="radio" name="meal" value="entre" id="entre"/> Entre
+                <input type="radio" name="meal" value="dessert" id="dessert" /> Dessert
             <p> Select any allergies you may have:</p>
-            <input type="checkbox" name="allergy" value="shellfish"> Shellfish
-            <input type="checkbox" name="allergy" value="gluten"> Gluten
-            <input type="checkbox" name="allergy" value="dairy"> Dairy
-            <input type="checkbox" name="allergy" value="nut"> Nuts
+            <input type="checkbox" name="allergy" value="shellfish" id="shellfish"> Shellfish
+            <input type="checkbox" name="allergy" value="gluten" id="gluten"> Gluten
+            <input type="checkbox" name="allergy" value="dairy" id="dairy"> Dairy
+            <input type="checkbox" name="allergy" value="nut" id="nuts"> Nuts
             <p>Other Allergies:</p>
-            <textarea name="allergy" cols="20" rows="3">Please specify</textarea>
+            <textarea name="otherAllergy" id="otherAllergy" cols="20" rows="3">Please specify</textarea>
         </fieldset>
+        <button type="submit">Submit</button>
         </form>
         <script src="js/script.js"></script>
     </body>
